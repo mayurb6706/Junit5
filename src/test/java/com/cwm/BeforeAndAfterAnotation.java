@@ -1,13 +1,17 @@
 package com.cwm;
 
-import static org.junit.Assert.*;
-
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class BeforeAndAfterAnotation {
 
+	@BeforeClass
+	public static void beforClass() {
+		System.out.println("Excuted Before Class");
+	}
 	@Before
 	public void setup() {
 		System.out.println("Before Executed");
@@ -25,5 +29,11 @@ public class BeforeAndAfterAnotation {
 	@After
 	public void tearDown() {
 		System.out.println("After Executed");
+	}
+	
+	
+	@AfterClass
+	public static void afterClass() {
+		System.out.println("Executed After class");
 	}
 }
