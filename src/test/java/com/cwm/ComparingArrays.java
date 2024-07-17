@@ -46,6 +46,17 @@ public class ComparingArrays {
 		Arrays.sort(numbers);
 	}
 	
+	
+//	Test performance
+	@Test(timeout = 100)
+	public void testArraySort_Performance() {
+		
+		int[] numbers= {10,54,46};
+		for(int i=1;i<=1000000;i++) {
+			numbers[1]=i;
+			Arrays.sort(numbers);
+		}
+	}
 
 
 }
